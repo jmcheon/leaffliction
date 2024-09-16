@@ -1,4 +1,4 @@
 leaves.zip
 images
-*.png
+#*.png
 __pycache__
