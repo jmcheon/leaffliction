@@ -16,12 +16,12 @@ python3  02.Augmentation.py
 # Save transformed image plots
 python3  03.Transformation.py  -src [SRC_PATH] -dst [DST_PATH]
 
-# Print the accuracy with validation dataset
+# Print the accuracy on validation dataset
 python3  04.Classification
 ```
 
 ### Tensorboard
-To visualize the learning curves using tensorboard, excute the following command.
+To visualize the learning curves using tensorboard, execute the following command.
 ```
 tensorboard --logdir runs
 ```
@@ -72,8 +72,15 @@ The model is designed to classify leaf diseases based on images of leaves. The m
 		- Output: `NUM_CLASSES` units (representing the number of disease classes)
 		- Activation function: Softmax
 
-### Visualization
-<img src="https://github.com/jmcheon/leaffliction/assets/leaffliction_output_ex1.png" alt="output example1">
+## Visualization
+
+### Test Accuracy
+We have 10 test images and the model has 100% accuracy 
+<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/leaffliction_output_ex1.png" alt="output example1">
+
+### Validation Accuracy
+<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/validation_accuracy_ex1.png" alt="validation accuracy">
+
 
 ## Resources
 - [Youtube Coursera CNN](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF)
