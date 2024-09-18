@@ -12,10 +12,14 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
 ])
 
-dataset = datasets.ImageFolder(root=IMAGE_FOLDER, transform=transform)
+try:
+    dataset = datasets.ImageFolder(root=IMAGE_FOLDER, transform=transform)
+    NUM_CLASSES = len(dataset.classes)
+    class_to_idx = dataset.class_to_idx
+except Exception as e:
+    print(e)
+    exit()
 
-NUM_CLASSES = len(dataset.classes)
-class_to_idx = dataset.class_to_idx
 
 
 # Define model
