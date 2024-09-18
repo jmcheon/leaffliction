@@ -74,6 +74,81 @@ The model is designed to classify leaf diseases based on images of leaves. The m
 
 ## Visualization
 
+### Distribution
+<table>
+	<tr>
+		<th>
+			Apple Image Distribution
+		</th>
+		<th>
+			Grape Image Distribution
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_combined_chart.png" alt="apple image distribution">
+		</td>
+  		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/grape_combined_chart.png" alt="grape image distribution">	
+		</td>
+	</tr>
+</table>
+
+
+### Transformation
+<table>
+	<tr>
+		<th>
+			Mask
+		</th>
+		<th>
+			Gaussian Blur
+		</th>
+		<th>
+			Roi objects
+		</th>
+		<th>
+			Analyze object
+		</th>
+		<th>
+			Pseudolandmarks
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_mask.JPG" alt="transformation mask image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_gaussian_blur.JPG" alt="transformation gaussian blur image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_roi_objects.JPG" alt="transformation roi objects image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_analyze_object.JPG" alt="transformation analyze object image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_pseudolandmarks.JPG" alt="transformation pseudolandmarks image" width=175px height=175px>
+		</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+<table align="center">
+	<tr>
+		<th>
+			Color Histogram
+		</th>
+	</tr>
+	<tr>
+  		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/transformation_color_hist_ex1.png" alt="color histogram example1" width=600px height=400px>
+		</td>
+	</tr>
+</table>
+
 ### Test Accuracy
 We have 10 test images and the model has 100% accuracy 
 <img src="https://github.com/jmcheon/leaffliction/blob/main/assets/leaffliction_output_ex1.png" alt="output example1">
