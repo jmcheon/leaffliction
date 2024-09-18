@@ -74,7 +74,8 @@ The model is designed to classify leaf diseases based on images of leaves. The m
 
 ## Visualization
 
-### Distribution
+### 01. Distribution
+There are 2 distinct leaf types; `apple` and `grape`, each of which consists of 4 labels.
 <table>
 	<tr>
 		<th>
@@ -94,8 +95,55 @@ The model is designed to classify leaf diseases based on images of leaves. The m
 	</tr>
 </table>
 
+### 02. Augmentation
+The following 6 image augmentation techniques are applied to one single-leaf image labeled `apple black rot`.
 
-### Transformation
+<table>
+	<tr>
+		<th>
+			Brightness
+		</th>
+		<th>
+			Contrast
+		</th>
+		<th>
+			Flip
+		</th>
+		<th>
+			Perspective
+		</th>
+		<th>
+			Rotate
+		</th>
+		<th>
+			Saturation
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_Brightness.JPG" alt="augmentation brightness image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_Contrast.JPG" alt="augmentation contrast image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_Flip.JPG" alt="augmentation flip image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_Perspective.JPG" alt="augmentation perspective image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_Rotate.JPG" alt="augmentation rotate image" width=175px height=175px>
+		</td>
+		<td>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_Saturation.JPG" alt="augmentation saturation image" width=175px height=175px>
+		</td>
+	</tr>
+</table>
+
+### 03. Transformation
+The following 6 image transformation techniques are applied to one single-leaf image labeled `apple black rot`.
+
 <table>
 	<tr>
 		<th>
@@ -149,12 +197,16 @@ The model is designed to classify leaf diseases based on images of leaves. The m
 	</tr>
 </table>
 
-### Test Accuracy
-We have 10 test images and the model has 100% accuracy 
-<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/leaffliction_output_ex1.png" alt="output example1">
+### 04. Classification
 
-### Validation Accuracy
+#### Validation Accuracy
 <img src="https://github.com/jmcheon/leaffliction/blob/main/assets/validation_accuracy_ex1.png" alt="validation accuracy">
+
+#### Test Accuracy
+We have 10 test images and the model has 100% accuracy 
+<div align="center">
+	<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/predicted.png" alt="predicted example1">
+</div>
 
 
 ## Resources
