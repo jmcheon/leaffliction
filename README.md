@@ -6,25 +6,105 @@
 | - `python3.10`<br> - `torch`<br> - `torchvision`<br> - `opencv`<br> - `plantcv`<br> - `numpy`<br>  - `matplotlib`<br>  | - `Rigor`<br> - `Group & interpersonal`<br> - `Algorithms & AI` |
 
 ## Usage
+There are 4 distinct parts in this project, `01. Distribution`, `02. Augmentation`, `03. Transformation`, and `04. Classification`.
+
+### 01. Distribution
+Download image dataset and generate distribution chart image
 ```bash
-# Download image dataset and generate distribution chart image
+usage: 01.Distribution.py [-h] directories [directories ...]
+
+A program to analyze plant images and generate charts.
+
+positional arguments:
+  directories  The directories to store extracted images and save the charts (ex: 01.Distribution apple)
+
+options:
+  -h, --help   show this help message and exit
+```
+
+#### Example
+```bash
 python3  01.Distribution.py  apple  grape
+```
 
-# Augment unbalanced image dataset
+<br/>
+
+### 02. Augmentation
+Augment unbalanced image dataset
+```bash
+usage: 02.Augmentation.py [-h] [file_path]
+
+A program to augment images samples by applying 6 types of transformation.
+
+positional arguments:
+  file_path   Image file path to transform to 6 different types.
+
+options:
+  -h, --help  show this help message and exit
+```
+
+#### Example
+```bash
 python3  02.Augmentation.py
+```
 
-# Save transformed image plots
+<br/>
+
+### 03. Transformation
+Save transformed image plots
+
+```bash
+usage: 03.Transformation.py [-h] -src [SRC_PATH] [-dst [DST_PATH]] [-gaussian] [-mask] [-roi] [-analyze] [-pseudo] [-hist]
+
+A program to display image transformation.
+
+options:
+  -h, --help            show this help message and exit
+  -src [SRC_PATH], --src_path [SRC_PATH]
+                        Image file path.
+  -dst [DST_PATH], --dst_path [DST_PATH]
+                        Destination directory path.
+  -gaussian, --gaussian_blur
+                        Gaussian Transform
+  -mask                 Mask Transform
+  -roi, --roi_objects   Roi Transform
+  -analyze, --analyze_object
+                        Analyze Transform
+  -pseudo, --pseudolandmarks
+                        Psudolandmark Transform
+  -hist, --color_histogram
+                        Color histogram Transform
+```
+
+#### Example
+```bash
 python3  03.Transformation.py  -src [SRC_PATH] -dst [DST_PATH]
+```
 
-# Print the accuracy on validation dataset
+<br/>
+
+### 04. Classification
+Print the accuracy on validation dataset
+
+```bash
+usage: 04.Classification.py [-h] [folder_path]
+
+A program to classify a type of leaf from validation set.
+
+positional arguments:
+  folder_path  Image folder path.
+
+options:
+  -h, --help   show this help message and exit
+```
+
+#### Example
+```bash
 python3  04.Classification
 ```
 
-### Tensorboard
-To visualize the learning curves using tensorboard, execute the following command.
-```
-tensorboard --logdir runs
-```
+<br/>
+<br/>
 
 ## Implementation
 
@@ -192,12 +272,18 @@ The following 6 image transformation techniques are applied to one single-leaf i
 	</tr>
 	<tr>
   		<td>
-			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/transformation_color_hist_ex1.png" alt="color histogram example1" width=600px height=400px>
+			<img src="https://github.com/jmcheon/leaffliction/blob/main/assets/apple_black_rot_image (100)_color_histogram.JPG" alt="color histogram image" width=600px height=400px>
 		</td>
 	</tr>
 </table>
 
 ### 04. Classification
+
+#### Tensorboard
+To visualize the learning curves using tensorboard, execute the following command.
+```
+tensorboard --logdir runs
+```
 
 #### Validation Accuracy
 <img src="https://github.com/jmcheon/leaffliction/blob/main/assets/validation_accuracy_ex1.png" alt="validation accuracy">
